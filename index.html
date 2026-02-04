@@ -10,7 +10,18 @@
 <body>
   <nav class="navbar" data-controller="navbar">
     <div class="navbar-container">
-      <a href="/" class="navbar-logo">
+      <div class="navbar-left">
+        <button class="hamburger" data-action="click->navbar#toggle" aria-label="Menu" data-navbar-target="hamburger">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+        <a href="/" class="navbar-logo desktop-only">
+          <span class="logo-text">STORE</span>
+        </a>
+      </div>
+
+      <a href="/" class="navbar-logo mobile-center">
         <span class="logo-text">STORE</span>
       </a>
 
@@ -181,23 +192,47 @@
             <path d="m21 21-4.35-4.35"></path>
           </svg>
         </button>
-        <button class="icon-btn" aria-label="Cart">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <path d="M16 10a4 4 0 0 1-8 0"></path>
+        <button class="icon-btn" aria-label="Cart" data-action="click->navbar#openCart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
           </svg>
         </button>
       </div>
-
-      <button class="hamburger" data-action="click->navbar#toggle" aria-label="Menu" data-navbar-target="hamburger">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
     </div>
 
     <div class="mobile-overlay" data-navbar-target="overlay" data-action="click->navbar#close"></div>
+
+    <div class="cart-overlay" data-navbar-target="cartOverlay" data-action="click->navbar#closeCart"></div>
+    <div class="cart-panel" data-navbar-target="cartPanel">
+      <div class="cart-panel-header">
+        <span class="cart-title">Your Cart</span>
+        <button class="close-btn" data-action="click->navbar#closeCart" aria-label="Close cart">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="cart-content">
+        <div class="cart-empty">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <path d="M3 6h18"></path>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <p>Your cart is empty</p>
+          <a href="#" class="cart-shop-link">Continue Shopping</a>
+        </div>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-subtotal">
+          <span>Subtotal</span>
+          <span class="cart-subtotal-amount">KES 0.00</span>
+        </div>
+        <button class="cart-checkout-btn">Checkout</button>
+        <p class="cart-footer-note">Shipping and taxes calculated at checkout</p>
+      </div>
+    </div>
 
     <div class="search-overlay" data-navbar-target="searchOverlay" data-action="click->navbar#closeSearch">
       <div class="search-container" data-action="click->navbar#stopPropagation">

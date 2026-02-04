@@ -1,5 +1,5 @@
 class NavbarController extends Stimulus.Controller {
-  static targets = ["mobilePanel", "overlay", "hamburger", "accordion", "searchOverlay", "searchInput"]
+  static targets = ["mobilePanel", "overlay", "hamburger", "accordion", "searchOverlay", "searchInput", "cartOverlay", "cartPanel"]
 
   connect() {
     this.boundHandleEscape = this.handleEscape.bind(this)
@@ -48,6 +48,18 @@ class NavbarController extends Stimulus.Controller {
     this.searchInputTarget.value = ""
   }
 
+  openCart() {
+    this.cartOverlayTarget.classList.add("active")
+    this.cartPanelTarget.classList.add("active")
+    document.body.style.overflow = "hidden"
+  }
+
+  closeCart() {
+    this.cartOverlayTarget.classList.remove("active")
+    this.cartPanelTarget.classList.remove("active")
+    document.body.style.overflow = ""
+  }
+
   stopPropagation(event) {
     event.stopPropagation()
   }
@@ -56,6 +68,7 @@ class NavbarController extends Stimulus.Controller {
     if (event.key === "Escape") {
       this.close()
       this.closeSearch()
+      this.closeCart()
     }
   }
 
