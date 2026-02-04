@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecommerce Store</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/@hotwired/stimulus/dist/stimulus.umd.js"></script>
+</head>
+<body>
+  <nav class="navbar" data-controller="navbar">
+    <div class="navbar-container">
+      <a href="/" class="navbar-logo">
+        <span class="logo-text">STORE</span>
+      </a>
+
+      <ul class="navbar-menu">
+        <li class="nav-item has-dropdown">
+          <a href="#" class="nav-link">Shop</a>
+          <div class="mega-dropdown">
+            <div class="dropdown-grid">
+              <div class="dropdown-column">
+                <h4 class="dropdown-heading">Women</h4>
+                <ul class="dropdown-links">
+                  <li>
+                    <a href="#" class="dropdown-item">
+                      <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=80&h=80&fit=crop" alt="Dresses">
+                      <span>Dresses</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-item">
+                      <img src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=80&h=80&fit=crop" alt="Tops">
+                      <span>Tops</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-item">
+                      <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=80&h=80&fit=crop" alt="Bottoms">
+                      <span>Bottoms</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-item">
+                      <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=80&h=80&fit=crop" alt="Outerwear">
+                      <span>Outerwear</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="dropdown-column">
+                <h4 class="dropdown-heading">Men</h4>
+                <ul class="dropdown-links">
+                  <li>
+                    <a href="#" class="dropdown-item">
+                      <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=80&h=80&fit=crop" alt="Shirts">
+                      <span>Shirts</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-item">
+                      <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=80&h=80&fit=crop" alt="Pants">
+                      <span>Pants</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-item">
+                      <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=80&h=80&fit=crop" alt="Jackets">
+                      <span>Jackets</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-item">
+                      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=80&h=80&fit=crop" alt="Footwear">
+                      <span>Footwear</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="dropdown-column featured">
+                <a href="#" class="featured-product">
+                  <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=300&h=400&fit=crop" alt="Featured Product">
+                  <span class="featured-label">New Arrivals</span>
+                </a>
+              </div>
+              <div class="dropdown-column featured">
+                <a href="#" class="featured-product">
+                  <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=300&h=400&fit=crop" alt="Featured Product">
+                  <span class="featured-label">Best Sellers</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item has-dropdown">
+          <a href="#" class="nav-link">Collections</a>
+          <div class="mega-dropdown">
+            <div class="dropdown-grid">
+              <div class="dropdown-column">
+                <h4 class="dropdown-heading">Seasonal</h4>
+                <ul class="dropdown-links">
+                  <li>
+                    <a href="#" class="dropdown-item">
+                      <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=80&h=80&fit=crop" alt="Spring">
+                      <span>Spring Collection</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-item">
+                      <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=80&h=80&fit=crop" alt="Summer">
+                      <span>Summer Essentials</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-item">
+                      <img src="https://images.unsplash.com/photo-1511401139252-f158d3209c17?w=80&h=80&fit=crop" alt="Fall">
+                      <span>Fall Favorites</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-item">
+                      <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=80&h=80&fit=crop" alt="Winter">
+                      <span>Winter Warmth</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="dropdown-column">
+                <h4 class="dropdown-heading">Lifestyle</h4>
+                <ul class="dropdown-links">
+                  <li>
+                    <a href="#" class="dropdown-item">
+                      <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=80&h=80&fit=crop" alt="Athleisure">
+                      <span>Athleisure</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-item">
+                      <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=80&h=80&fit=crop" alt="Workwear">
+                      <span>Workwear</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-item">
+                      <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=80&h=80&fit=crop" alt="Casual">
+                      <span>Casual</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-item">
+                      <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=80&h=80&fit=crop" alt="Evening">
+                      <span>Evening</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="dropdown-column featured">
+                <a href="#" class="featured-product">
+                  <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=300&h=400&fit=crop" alt="Featured Collection">
+                  <span class="featured-label">Spring 2025</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link">Contact</a>
+        </li>
+      </ul>
+
+      <div class="navbar-actions">
+        <button class="icon-btn" aria-label="Search" data-action="click->navbar#openSearch">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+        </button>
+      </div>
+
+      <button class="hamburger" data-action="click->navbar#toggle" aria-label="Menu" data-navbar-target="hamburger">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <div class="mobile-overlay" data-navbar-target="overlay" data-action="click->navbar#close"></div>
+
+    <div class="search-overlay" data-navbar-target="searchOverlay" data-action="click->navbar#closeSearch">
+      <div class="search-container" data-action="click->navbar#stopPropagation">
+        <div class="search-header">
+          <span class="search-title">Search</span>
+          <button class="close-btn" data-action="click->navbar#closeSearch" aria-label="Close search">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="search-input-wrapper">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search for products..."
+            data-navbar-target="searchInput"
+          >
+          <kbd class="search-kbd">ESC</kbd>
+        </div>
+        <div class="search-suggestions">
+          <span class="search-suggestions-label">Popular Searches</span>
+          <div class="search-tags">
+            <a href="#" class="search-tag">Dresses</a>
+            <a href="#" class="search-tag">Summer Collection</a>
+            <a href="#" class="search-tag">New Arrivals</a>
+            <a href="#" class="search-tag">Sale</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-panel" data-navbar-target="mobilePanel">
+      <div class="mobile-panel-header">
+        <span class="logo-text">STORE</span>
+        <button class="close-btn" data-action="click->navbar#close" aria-label="Close menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-menu">
+        <div class="mobile-accordion" data-navbar-target="accordion">
+          <button class="accordion-trigger" data-action="click->navbar#toggleAccordion">
+            Shop
+            <svg class="accordion-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-section">
+              <span class="accordion-label">Women</span>
+              <ul>
+                <li>
+                  <a href="#" class="mobile-item">
+                    <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=80&h=80&fit=crop" alt="Dresses">
+                    <span>Dresses</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="mobile-item">
+                    <img src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=80&h=80&fit=crop" alt="Tops">
+                    <span>Tops</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="mobile-item">
+                    <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=80&h=80&fit=crop" alt="Bottoms">
+                    <span>Bottoms</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="mobile-item">
+                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=80&h=80&fit=crop" alt="Outerwear">
+                    <span>Outerwear</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="accordion-section">
+              <span class="accordion-label">Men</span>
+              <ul>
+                <li>
+                  <a href="#" class="mobile-item">
+                    <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=80&h=80&fit=crop" alt="Shirts">
+                    <span>Shirts</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="mobile-item">
+                    <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=80&h=80&fit=crop" alt="Pants">
+                    <span>Pants</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="mobile-item">
+                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=80&h=80&fit=crop" alt="Jackets">
+                    <span>Jackets</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="mobile-item">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=80&h=80&fit=crop" alt="Footwear">
+                    <span>Footwear</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile-accordion" data-navbar-target="accordion">
+          <button class="accordion-trigger" data-action="click->navbar#toggleAccordion">
+            Collections
+            <svg class="accordion-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="accordion-content">
+            <ul>
+              <li>
+                <a href="#" class="mobile-item">
+                  <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=80&h=80&fit=crop" alt="Spring">
+                  <span>Spring Collection</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="mobile-item">
+                  <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=80&h=80&fit=crop" alt="Summer">
+                  <span>Summer Essentials</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="mobile-item">
+                  <img src="https://images.unsplash.com/photo-1511401139252-f158d3209c17?w=80&h=80&fit=crop" alt="Fall">
+                  <span>Fall Favorites</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="mobile-item">
+                  <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=80&h=80&fit=crop" alt="Winter">
+                  <span>Winter Warmth</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="#" class="mobile-link">About</a>
+        <a href="#" class="mobile-link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <section class="hero">
+      <div class="hero-content">
+        <span class="hero-eyebrow">New Season Collection</span>
+        <h1>Elevate Your Everyday Style</h1>
+        <p class="hero-subtitle">Discover timeless pieces crafted for comfort and designed to make you look effortlessly stylish, wherever life takes you.</p>
+        <div class="hero-actions">
+          <a href="#" class="hero-cta">
+            Shop Now
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="#" class="hero-secondary">View Lookbook</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="navbar_controller.js"></script>
+  <script>
+    const application = Stimulus.Application.start();
+    application.register("navbar", NavbarController);
+  </script>
+</body>
+</html>
