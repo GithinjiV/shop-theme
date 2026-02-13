@@ -15,6 +15,8 @@
   --color-border: #e5e5e5;
   --color-hover: #f5f5f5;
   --navbar-height: 70px;
+  --announcement-height: 36px;
+  --header-offset: calc(var(--announcement-height) + var(--navbar-height));
   --transition-fast: 0.2s ease;
   --transition-base: 0.3s ease;
   --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -43,15 +45,110 @@ button {
   color: inherit;
 }
 
-.navbar {
+.announcement-bar {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  height: var(--announcement-height);
+  background: var(--color-text);
+  color: var(--color-bg);
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.announcement-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.announcement-divider {
+  opacity: 0.4;
+}
+
+.announcement-link {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity var(--transition-fast);
+}
+
+.announcement-link:hover {
+  opacity: 0.8;
+}
+
+.navbar {
+  position: fixed;
+  top: var(--announcement-height);
   left: 0;
   right: 0;
   height: var(--navbar-height);
   background: var(--color-bg);
   border-bottom: 1px solid var(--color-border);
   z-index: 1000;
+}
+
+.categories-slider {
+  padding: 60px 0;
+  background: var(--color-hover);
+  overflow: hidden;
+}
+
+.categories-track {
+  display: flex;
+  gap: 20px;
+  padding: 0 48px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
+}
+
+.categories-track::-webkit-scrollbar {
+  display: none;
+}
+
+.categories-track:active {
+  cursor: grabbing;
+}
+
+.category-card {
+  flex-shrink: 0;
+  width: 280px;
+}
+
+.category-card-img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--color-border);
+}
+
+.category-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.category-card:hover .category-card-img img {
+  transform: scale(1.05);
+}
+
+.category-card-label {
+  display: block;
+  margin-top: 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--color-text);
 }
 
 .navbar-container {
@@ -266,7 +363,10 @@ button {
 
 .mobile-overlay {
   position: fixed;
-  inset: 0;
+  top: var(--header-offset);
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   visibility: hidden;
@@ -281,7 +381,7 @@ button {
 
 .mobile-panel {
   position: fixed;
-  top: 0;
+  top: var(--header-offset);
   left: 0;
   bottom: 0;
   width: 100%;
@@ -299,7 +399,10 @@ button {
 
 .cart-overlay {
   position: fixed;
-  inset: 0;
+  top: var(--header-offset);
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   visibility: hidden;
@@ -314,7 +417,7 @@ button {
 
 .cart-panel {
   position: fixed;
-  top: 0;
+  top: var(--header-offset);
   right: 0;
   bottom: 0;
   width: 100%;
@@ -540,7 +643,7 @@ button {
 }
 
 .main-content {
-  padding-top: var(--navbar-height);
+  padding-top: var(--header-offset);
 }
 
 .hero {
@@ -671,7 +774,7 @@ button {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: 120px 24px 24px;
+  padding: calc(var(--header-offset) + 24px) 24px 24px;
 }
 
 .search-overlay.active {
@@ -786,7 +889,7 @@ button {
 
 @media (max-width: 768px) {
   .search-overlay {
-    padding: 80px 16px 16px;
+    padding: calc(var(--header-offset) + 16px) 16px 16px;
     align-items: flex-start;
   }
 
@@ -816,6 +919,23 @@ button {
 }
 
 @media (max-width: 768px) {
+  .announcement-content {
+    font-size: 0.65rem;
+    gap: 6px;
+    padding: 0 16px;
+    text-align: center;
+  }
+
+  .announcement-divider {
+    display: none;
+  }
+
+  .announcement-content {
+    flex-wrap: wrap;
+    gap: 2px 6px;
+    justify-content: center;
+  }
+
   .navbar-menu {
     display: none;
   }
@@ -839,17 +959,39 @@ button {
     display: none;
   }
 
-  .cart-panel {
+  .mobile-overlay,
+  .cart-overlay {
+    top: var(--announcement-height);
+  }
+
+  .mobile-panel {
+    top: var(--announcement-height);
     max-width: 100%;
+    z-index: 1001;
+  }
+
+  .cart-panel {
+    top: var(--announcement-height);
+    max-width: 100%;
+    z-index: 1001;
+  }
+
+  .categories-slider {
+    padding: 40px 0;
+  }
+
+  .categories-track {
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  .category-card {
+    width: 220px;
   }
 }
 
 @media (max-width: 480px) {
   .navbar-container {
     padding: 0 16px;
-  }
-
-  .mobile-panel {
-    max-width: 100%;
   }
 }

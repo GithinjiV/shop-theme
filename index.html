@@ -8,6 +8,14 @@
   <script src="https://unpkg.com/@hotwired/stimulus/dist/stimulus.umd.js"></script>
 </head>
 <body>
+  <div class="announcement-bar">
+    <div class="announcement-content">
+      <span>Free shipping on orders over KES 5,000</span>
+      <span class="announcement-divider">|</span>
+      <a href="#" class="announcement-link">Shop New Arrivals</a>
+    </div>
+  </div>
+
   <nav class="navbar" data-controller="navbar">
     <div class="navbar-container">
       <div class="navbar-left">
@@ -411,12 +419,67 @@
         </div>
       </div>
     </section>
+
+    <section class="categories-slider" data-controller="slider">
+      <div class="categories-track" data-slider-target="track">
+        <a href="#" class="category-card">
+          <div class="category-card-img">
+            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=520&fit=crop" alt="Dresses">
+          </div>
+          <span class="category-card-label">DRESSES</span>
+        </a>
+        <a href="#" class="category-card">
+          <div class="category-card-img">
+            <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=520&fit=crop" alt="Bottoms">
+          </div>
+          <span class="category-card-label">BOTTOMS</span>
+        </a>
+        <a href="#" class="category-card">
+          <div class="category-card-img">
+            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=520&fit=crop" alt="Outerwear">
+          </div>
+          <span class="category-card-label">OUTERWEAR</span>
+        </a>
+        <a href="#" class="category-card">
+          <div class="category-card-img">
+            <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=400&h=520&fit=crop" alt="Knitwear">
+          </div>
+          <span class="category-card-label">KNITWEAR</span>
+        </a>
+        <a href="#" class="category-card">
+          <div class="category-card-img">
+            <img src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=400&h=520&fit=crop" alt="Tops">
+          </div>
+          <span class="category-card-label">TOPS</span>
+        </a>
+        <a href="#" class="category-card">
+          <div class="category-card-img">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=520&fit=crop" alt="Footwear">
+          </div>
+          <span class="category-card-label">FOOTWEAR</span>
+        </a>
+        <a href="#" class="category-card">
+          <div class="category-card-img">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=520&fit=crop" alt="Occasionwear">
+          </div>
+          <span class="category-card-label">OCCASIONWEAR</span>
+        </a>
+        <a href="#" class="category-card">
+          <div class="category-card-img">
+            <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=400&h=520&fit=crop" alt="Athleisure">
+          </div>
+          <span class="category-card-label">ATHLEISURE</span>
+        </a>
+      </div>
+    </section>
   </main>
 
   <script src="navbar_controller.js"></script>
+  <script src="slider_controller.js"></script>
   <script>
     const application = Stimulus.Application.start();
     application.register("navbar", NavbarController);
+    application.register("slider", SliderController);
   </script>
 </body>
 </html>
