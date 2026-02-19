@@ -24,6 +24,49 @@ In `hero.css`:
 ```
 Change `0.5s` or swap `ease` for `linear`, `ease-in-out`, etc.
 
+## Text Position
+The text sits inside `.hero-overlay > .container`. The container uses flexbox (`d-flex flex-column`) to stack the heading, subtitle, and buttons. Control position by changing the Bootstrap utility classes on the container div in `hero.html`.
+
+**Vertically centered (default):**
+```html
+<div class="container h-100 d-flex flex-column justify-content-center">
+```
+
+**Vertically bottom:**
+```html
+<div class="container h-100 d-flex flex-column justify-content-end pb-5">
+```
+
+**Vertically top:**
+```html
+<div class="container h-100 d-flex flex-column justify-content-start pt-5">
+```
+
+**Horizontally centered** — add `align-items-center text-center` to the container:
+```html
+<div class="container h-100 d-flex flex-column justify-content-center align-items-center text-center">
+```
+
+**Pinned to the right** — add `align-items-end text-right`:
+```html
+<div class="container h-100 d-flex flex-column justify-content-center align-items-end text-right">
+```
+
+**Combining vertical + horizontal** — mix any `justify-content-*` with `align-items-*`:
+| Position | Classes |
+|---|---|
+| Top left | `justify-content-start align-items-start pt-5` |
+| Top center | `justify-content-start align-items-center text-center pt-5` |
+| Top right | `justify-content-start align-items-end text-right pt-5` |
+| Center left | `justify-content-center` (default) |
+| Center center | `justify-content-center align-items-center text-center` |
+| Center right | `justify-content-center align-items-end text-right` |
+| Bottom left | `justify-content-end pb-5` |
+| Bottom center | `justify-content-end align-items-center text-center pb-5` |
+| Bottom right | `justify-content-end align-items-end text-right pb-5` |
+
+Each slide can have its own position — just change the classes on that slide's container div independently.
+
 ## Overlay Darkness
 The dark tint over the image is on `.hero-overlay`:
 ```css
