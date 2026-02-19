@@ -1,0 +1,285 @@
+.header-icon-label {
+  font-size: 0.7rem;
+}
+
+.header-icon-link,
+.header-icon-link:hover,
+.header-icon-link * {
+  text-decoration: none;
+}
+
+.header-icon-link:hover {
+  color: #555 !important;
+}
+
+.navbar-nav .nav-link {
+  font-size: 0.85rem;
+  color: #000;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #666;
+}
+
+.navbar-nav .dropdown-toggle::after {
+  display: none;
+}
+
+.nav-chevron {
+  font-size: 0.65rem;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+.dropdown-menu {
+  border-radius: 0;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.mega-dropdown {
+  display: none;
+  padding: 1.25rem;
+  gap: 1rem;
+  width: 580px;
+  left: 50% !important;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .dropdown:hover > .mega-dropdown {
+  display: flex !important;
+}
+
+.mega-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.15s;
+}
+
+.mega-item:hover {
+  background-color: #f8f5f2;
+  color: #000;
+}
+
+.mega-item img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.mega-item span {
+  font-size: 0.8rem;
+}
+
+.mobile-sublink-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.marquee-outer {
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  animation: marquee 30s linear infinite;
+  animation-play-state: paused;
+}
+
+.marquee-track.marquee-static {
+  justify-content: center;
+}
+
+.marquee-items {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  padding: 0.4rem 0;
+}
+
+.marquee-item {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.marquee-title {
+  font-weight: 600;
+}
+
+.marquee-subtitle {
+  font-weight: 400;
+}
+
+.marquee-divider {
+  margin: 0 2.5rem;
+  color: #c9a98a;
+  font-size: 1.4rem;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(var(--marquee-distance)); }
+}
+
+.announcement-slide {
+  font-size: 0.8rem;
+}
+
+.announcement-control {
+  width: auto;
+  padding: 0 0.5rem;
+}
+
+.announcement-control i {
+  font-size: 0.75rem;
+}
+
+.mobile-nav-link {
+  font-size: 0.9rem;
+  color: #333;
+  text-decoration: none;
+  background-color: #fff;
+}
+
+.mobile-nav-link:hover {
+  color: #000;
+  background-color: #f8f8f8;
+}
+
+.mobile-nav-sublink {
+  font-size: 0.85rem;
+  color: #555;
+  text-decoration: none;
+  background-color: #fafafa;
+}
+
+.mobile-nav-sublink:hover {
+  color: #000;
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 991.98px) {
+  #mobileNavCollapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
+
+  .mobile-search-panel {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 5;
+  }
+
+  .mobile-search-panel.active {
+    display: block;
+  }
+}
+
+.mobile-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 900;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.mobile-menu-backdrop.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.bi-chevron-down {
+  transition: transform 0.2s;
+}
+
+.bi-chevron-down.chevron-open {
+  transform: rotate(180deg);
+}
+
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1040;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.cart-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 380px;
+  max-width: 100vw;
+  height: 100%;
+  background: #fff;
+  z-index: 1050;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-drawer.open {
+  transform: translateX(0);
+}
+
+.cart-drawer-header {
+  flex-shrink: 0;
+}
+
+.cart-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.cart-drawer-body {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.cart-empty-text {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.cart-shop-btn {
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
