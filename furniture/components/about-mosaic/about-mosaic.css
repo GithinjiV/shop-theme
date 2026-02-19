@@ -1,0 +1,49 @@
+.about-mosaic {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1.2fr 1fr;
+  gap: 0.85rem;
+  margin-bottom: 3.1rem;
+}
+
+.about-stack {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.about-placeholder {
+  background: #d9d9d9;
+}
+
+.about-placeholder-short {
+  min-height: 84px;
+}
+
+.about-placeholder-tall {
+  min-height: 350px;
+}
+
+@media (max-width: 991.98px) {
+  .about-mosaic {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2rem;
+  }
+
+  .about-placeholder-short {
+    min-height: 70px;
+  }
+
+  .about-placeholder-tall {
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about-mosaic {
+    gap: 0.6rem;
+  }
+
+  .about-stack {
+    gap: 0.6rem;
+  }
+}

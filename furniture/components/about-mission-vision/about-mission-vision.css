@@ -1,0 +1,61 @@
+.about-mission-area {
+  background: #ececec;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+  margin-bottom: 2.2rem;
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.65rem;
+  margin-bottom: 0;
+}
+
+.about-card {
+  border: 1px solid #a7a7a7;
+  border-radius: 12px;
+  padding: 2rem 2.25rem;
+  min-height: 330px;
+  background: #ececec;
+}
+
+.about-card-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+  letter-spacing: -0.01em;
+}
+
+.about-card p {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.36;
+  color: #333;
+}
+
+@media (max-width: 991.98px) {
+  .about-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .about-mission-area {
+    margin-bottom: 2rem;
+  }
+
+  .about-card {
+    min-height: 0;
+    padding: 1.25rem 1.2rem;
+  }
+
+  .about-card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .about-card p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}

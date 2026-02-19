@@ -3,7 +3,7 @@ body {
 }
 
 .header-icon-label {
-  font-size: 0.7rem;
+  font-size: 21px;
 }
 
 .header-icon-link,
@@ -17,7 +17,7 @@ body {
 }
 
 .navbar-nav .nav-link {
-  font-size: 0.85rem;
+  font-size: 21px;
   color: #000;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -84,7 +84,7 @@ body {
 }
 
 .mega-item span {
-  font-size: 0.8rem;
+  font-size: 21px;
 }
 
 .mobile-sublink-img {

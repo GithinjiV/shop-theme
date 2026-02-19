@@ -86,3 +86,17 @@ footer {
     text-align: center;
   }
 }
+
+@media (min-width: 992px) {
+  .footer-col-title {
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .footer-links a,
+  .footer-signup-btn,
+  .footer-copyright {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}

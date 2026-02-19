@@ -20,7 +20,7 @@
 }
 
 .navbar-nav .nav-link:hover {
-  color: #666;
+  color: #7a7a7a;
 }
 
 .navbar-nav .dropdown-toggle::after {
@@ -282,4 +282,115 @@
 .cart-shop-btn {
   font-size: 0.85rem;
   letter-spacing: 0.05em;
+}
+
+@media (min-width: 992px) {
+  .d-none.d-lg-flex.container.align-items-center.justify-content-between.py-2 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .header-search .form-inline {
+    height: 48px;
+    border: 1px solid #cfcfd4 !important;
+    background: #efeff2;
+    display: flex;
+    align-items: center;
+    padding-left: 0.85rem;
+  }
+
+  .header-search .form-control {
+    font-size: 15px;
+    background: transparent;
+    height: auto;
+  }
+
+  .header-search .btn {
+    width: 42px;
+    height: 46px;
+    border-left: 1px solid #c6c6cc !important;
+    background: #d8d8dd;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 0.35rem;
+    padding-left: 0;
+    border-radius: 0;
+  }
+
+  .header-search .btn i {
+    font-size: 1.7rem;
+  }
+
+  .header-icon-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0.9rem !important;
+    margin-right: 0.9rem !important;
+  }
+
+  .header-icon-link i {
+    font-size: 1.95rem !important;
+  }
+
+  .header-icon-label,
+  .navbar-nav .nav-link,
+  .mega-item span,
+  .marquee-items,
+  .announcement-slide,
+  .cart-empty-text,
+  .cart-shop-btn {
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  .header-icon-label {
+    margin-top: 0.2rem;
+    margin-bottom: 0;
+    line-height: 1.15;
+  }
+
+  .navbar.navbar-expand-lg {
+    min-height: 52px;
+  }
+
+  .navbar-nav .nav-link {
+    padding-top: 0.95rem;
+    padding-bottom: 0.95rem;
+    line-height: 1;
+  }
+
+  .nav-chevron {
+    font-size: 0.9rem;
+  }
+
+  .marquee-items {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .marquee-title {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .marquee-subtitle {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.15;
+  }
+
+  .marquee-divider {
+    color: #1d1d1d;
+    opacity: 0.55;
+    margin: 0 2rem;
+  }
+
+  .cart-title {
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: normal;
+  }
 }
