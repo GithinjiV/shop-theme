@@ -1,0 +1,344 @@
+.about-page {
+  background: #fff;
+  color: #1f1f1f;
+}
+
+.about-hero-copy {
+  text-align: center;
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+}
+
+.about-breadcrumb {
+  font-size: 2.2rem;
+  color: #4a3434;
+  line-height: 1.2;
+}
+
+.about-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #0f0f0f;
+}
+
+.about-subtitle {
+  max-width: 1040px;
+  margin: 2.3rem auto 0;
+  font-size: 2.45rem;
+  line-height: 1.3;
+  color: #1d1d1d;
+}
+
+.about-mosaic {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1.2fr 1fr;
+  gap: 0.85rem;
+  margin-bottom: 3.1rem;
+}
+
+.about-stack {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.about-placeholder {
+  background: #d9d9d9;
+}
+
+.about-placeholder-short {
+  min-height: 84px;
+}
+
+.about-placeholder-tall {
+  min-height: 350px;
+}
+
+.about-content-area {
+  padding-top: 2.4rem;
+  padding-bottom: 3rem;
+}
+
+.about-mission-area {
+  background: #ececec;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+  margin-bottom: 2.2rem;
+}
+
+.about-split-copy {
+  display: grid;
+  grid-template-columns: 0.95fr 1.25fr;
+  gap: 3.3rem;
+  margin-bottom: 3.2rem;
+}
+
+.about-section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.01em;
+}
+
+.about-body-copy {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.36;
+  color: #333;
+}
+
+.about-body-copy p + p {
+  margin-top: 1.45rem;
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.65rem;
+  margin-bottom: 0;
+}
+
+.about-card {
+  border: 1px solid #a7a7a7;
+  border-radius: 12px;
+  padding: 2rem 2.25rem;
+  min-height: 330px;
+  background: #ececec;
+}
+
+.about-card-title {
+  font-size: 2.05rem;
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+  letter-spacing: -0.01em;
+}
+
+.about-card p {
+  font-size: 1.03rem;
+  line-height: 1.36;
+  color: #333;
+}
+
+.about-split-work {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.8rem;
+  margin-bottom: 1.2rem;
+  align-items: start;
+}
+
+.about-work-placeholder {
+  min-height: 500px;
+  border-radius: 14px;
+}
+
+.about-deliver-section {
+  min-height: 430px;
+  background-image: url("images/f72af6b4f7747aa1891a926e5cec822adb317b8c.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-deliver-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.about-deliver-overlay {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  padding: 1rem;
+  max-width: 920px;
+}
+
+.about-deliver-title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.about-deliver-copy {
+  font-size: 21px;
+  letter-spacing: 0.02em;
+}
+
+.about-deliver-btn {
+  display: inline-block;
+  min-width: 220px;
+  background: #fff;
+  color: #111;
+  text-decoration: none;
+  font-size: 21px;
+  line-height: 1;
+  padding: 1.35rem 2.1rem;
+  border-radius: 14px;
+  font-weight: 400;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-deliver-btn:hover {
+  color: #111;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+@media (max-width: 991.98px) {
+  .about-content-area {
+    padding-top: 1.8rem;
+    padding-bottom: 2.2rem;
+  }
+
+  .about-title {
+    font-size: 2.3rem;
+  }
+
+  .about-breadcrumb {
+    font-size: 1.5rem;
+  }
+
+  .about-subtitle {
+    max-width: 820px;
+    margin-top: 1.3rem;
+    font-size: 21px;
+  }
+
+  .about-mosaic {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2rem;
+  }
+
+  .about-placeholder-short {
+    min-height: 70px;
+  }
+
+  .about-placeholder-tall {
+    min-height: 260px;
+  }
+
+  .about-split-copy {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-section-title {
+    font-size: 2.2rem;
+  }
+
+  .about-body-copy {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .about-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .about-mission-area {
+    margin-bottom: 2rem;
+  }
+
+  .about-card {
+    min-height: 0;
+    padding: 1.25rem 1.2rem;
+  }
+
+  .about-card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .about-card p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .about-split-work {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .about-work-placeholder {
+    min-height: 270px;
+  }
+
+  .about-deliver-section {
+    min-height: 360px;
+  }
+
+  .about-deliver-title {
+    font-size: 2.4rem;
+  }
+
+  .about-deliver-copy {
+    font-size: 1.45rem;
+  }
+
+  .about-deliver-btn {
+    font-size: 1.5rem;
+    padding: 1.1rem 1.8rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about-hero-copy {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .about-title {
+    font-size: 1.65rem;
+  }
+
+  .about-breadcrumb {
+    font-size: 1rem;
+  }
+
+  .about-subtitle {
+    margin-top: 0.9rem;
+    font-size: 0.98rem;
+    line-height: 1.45;
+  }
+
+  .about-section-title {
+    font-size: 1.75rem;
+  }
+
+  .about-mosaic {
+    gap: 0.6rem;
+  }
+
+  .about-stack {
+    gap: 0.6rem;
+  }
+
+  .about-deliver-section {
+    min-height: 300px;
+  }
+
+  .about-deliver-title {
+    font-size: 28px;
+  }
+
+  .about-deliver-copy {
+    font-size: 21px;
+  }
+
+  .about-deliver-btn {
+    min-width: 180px;
+    font-size: 1.15rem;
+    padding: 0.95rem 1.3rem;
+    border-radius: 10px;
+  }
+}
