@@ -1,0 +1,202 @@
+.sc-page {
+  background: #efefef;
+  color: #222;
+}
+
+.sc-title {
+  font-size: 37px;
+  font-weight: 700;
+}
+
+.sc-item-count {
+  font-size: 11px;
+  color: #555;
+}
+
+.sc-copy {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #222;
+  max-width: 1000px;
+}
+
+.sc-sort-row {
+  padding: 0.55rem 0;
+}
+
+.sc-sort-btn {
+  border: 1px solid #d7dbe1;
+  background: #e6ebf0;
+  color: #5d6772;
+  font-size: 10px;
+  padding: 0.45rem 0.7rem;
+  border-radius: 2px;
+}
+
+.sc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.15rem;
+}
+
+.sc-card h3 {
+  margin: 0.42rem 0 0.2rem;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: #5a5a5a;
+}
+
+.sc-card p {
+  margin: 0;
+  font-size: 9px;
+  font-weight: 500;
+  color: #121212;
+}
+
+.sc-card p span {
+  margin-left: 0.35rem;
+  color: #8a8a8a;
+  text-decoration: line-through;
+  font-size: 8px;
+  font-weight: 400;
+}
+
+.sc-image-wrap {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.sc-image-wrap img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.sc-badge {
+  position: absolute;
+  right: 0.45rem;
+  top: 0.45rem;
+  background: #ff3434;
+  color: #fff;
+  font-size: 9px;
+  padding: 0.2rem 0.35rem;
+  line-height: 1;
+}
+
+.sc-placeholder {
+  height: 160px;
+  background: #bcbcbc;
+}
+
+.sc-chip {
+  margin-top: 0.35rem;
+  display: inline-block;
+  background: #d8c4b2;
+  color: #111;
+  font-size: 8px;
+  line-height: 1;
+  padding: 0.22rem 0.34rem;
+}
+
+.sc-block {
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+.sc-block-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 0.95rem;
+}
+
+.sc-recent-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.sc-card-recent {
+  width: 230px;
+  min-width: 230px;
+}
+
+.sc-categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.55rem;
+}
+
+.sc-category-card {
+  display: block;
+  text-decoration: none;
+}
+
+.sc-category-card img {
+  width: 100%;
+  height: 98px;
+  border-radius: 4px;
+  object-fit: cover;
+  display: block;
+}
+
+.sc-category-card span {
+  display: block;
+  margin-top: 0.38rem;
+  font-size: 10px;
+  color: #6b6b6b;
+  line-height: 1.25;
+}
+
+@media (max-width: 575.98px) {
+  .sc-title {
+    font-size: 34px;
+  }
+
+  .sc-item-count {
+    font-size: 10px;
+  }
+
+  .sc-copy {
+    font-size: 12px;
+  }
+
+  .sc-grid {
+    gap: 0.55rem;
+  }
+
+  .sc-image-wrap img,
+  .sc-placeholder {
+    height: 96px;
+  }
+
+  .sc-card h3 {
+    font-size: 10px;
+  }
+
+  .sc-card p {
+    font-size: 9px;
+  }
+
+  .sc-card p span {
+    font-size: 7px;
+  }
+
+  .sc-card-recent {
+    width: 140px;
+    min-width: 140px;
+  }
+
+  .sc-block-title {
+    font-size: 30px;
+  }
+
+  .sc-category-card img {
+    height: 72px;
+  }
+
+  .sc-category-card span {
+    font-size: 8px;
+  }
+}
