@@ -17,7 +17,21 @@
   position: relative;
 }
 
-.hero-slide img {
+.hero-media {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-media-desktop {
+  display: block;
+}
+
+.hero-media-mobile {
+  display: none;
+}
+
+.hero-slide img,
+.hero-slide video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -110,6 +124,14 @@
 @media (max-width: 767.98px) {
   .hero-section {
     height: 420px;
+  }
+
+  .hero-media-desktop {
+    display: none;
+  }
+
+  .hero-media-mobile {
+    display: block;
   }
 
   .hero-title {

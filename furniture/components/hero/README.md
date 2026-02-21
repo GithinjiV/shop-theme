@@ -10,12 +10,47 @@ Mobile height is overridden at the bottom of the file (`420px` below 768px).
 ## Adding / Removing Slides
 Each slide is a `.hero-slide` div inside `.hero-track`. Add or remove slides freely — the controller (`hero_slider_controller.js`) counts them automatically and builds the dots to match.
 
+## Media Types Per Slide (Desktop vs Mobile)
+Each `.hero-slide` now supports separate media for desktop and mobile.
+
+Use this structure inside each slide:
+```html
+<div class="hero-media hero-media-desktop">
+  <!-- desktop img or video -->
+</div>
+<div class="hero-media hero-media-mobile">
+  <!-- mobile img or video -->
+</div>
+```
+
+You can mix media types:
+- Desktop video + mobile image
+- Desktop image + mobile video
+- Image on both
+- Video on both
+
+In `hero.css`, desktop shows `.hero-media-desktop` and mobile (`max-width: 767.98px`) shows `.hero-media-mobile`.
+
 ## Autoplay Speed
 In `hero_slider_controller.js`:
 ```js
 this.interval = setInterval(() => this.next(), 5000)
 ```
 Change `5000` (milliseconds) to any value. Set to `0` or remove `startAutoplay()` to disable autoplay.
+
+## Video Slide Behavior
+Video slides do not auto-advance to the next slide.
+
+Behavior:
+- If the active slide has a visible `<video>`, autoplay is paused.
+- When the active slide is image-only, autoplay resumes.
+- Arrow and dot navigation still works for all slide types.
+
+This logic is handled by:
+- `activeSlideHasVisibleVideo()`
+- `syncAutoplayState()`
+- `syncSlideVideos()`
+in `hero_slider_controller.js`.
 
 ## Transition Speed
 In `hero.css`:

@@ -9,6 +9,8 @@ export default class extends Controller {
     this.total = this.slides.length
     this.interval = null
 
+    if (!this.total) return
+
     this.buildDots()
     this.goTo(0)
     this.startAutoplay()
@@ -16,6 +18,7 @@ export default class extends Controller {
 
   disconnect() {
     this.stopAutoplay()
+    this.pauseAllVideos()
   }
 
   prev() {
@@ -34,6 +37,8 @@ export default class extends Controller {
     this.dotsTarget.querySelectorAll(".hero-dot").forEach((dot, i) => {
       dot.classList.toggle("active", i === index)
     })
+    this.syncSlideVideos()
+    this.syncAutoplayState()
   }
 
   buildDots() {
@@ -50,6 +55,9 @@ export default class extends Controller {
   }
 
   startAutoplay() {
+    if (!this.total) return
+    if (this.activeSlideHasVisibleVideo()) return
+    if (this.interval) return
     this.interval = setInterval(() => this.next(), 5000)
   }
 
@@ -60,5 +68,50 @@ export default class extends Controller {
   resetAutoplay() {
     this.stopAutoplay()
     this.startAutoplay()
+  }
+
+  syncAutoplayState() {
+    if (this.activeSlideHasVisibleVideo()) {
+      this.stopAutoplay()
+      return
+    }
+
+    if (!this.interval) {
+      this.startAutoplay()
+    }
+  }
+
+  syncSlideVideos() {
+    this.slides.forEach((slide, slideIndex) => {
+      slide.querySelectorAll("video").forEach(video => {
+        const isVisibleMedia = video.offsetParent !== null
+        const isActive = slideIndex === this.current && isVisibleMedia
+
+        if (isActive) {
+          const playPromise = video.play()
+          if (playPromise && typeof playPromise.catch === "function") {
+            playPromise.catch(() => {})
+          }
+          return
+        }
+
+        video.pause()
+        video.currentTime = 0
+      })
+    })
+  }
+
+  pauseAllVideos() {
+    this.slides.forEach(slide => {
+      slide.querySelectorAll("video").forEach(video => {
+        video.pause()
+      })
+    })
+  }
+
+  activeSlideHasVisibleVideo() {
+    const activeSlide = this.slides[this.current]
+    if (!activeSlide) return false
+    return Array.from(activeSlide.querySelectorAll("video")).some(video => video.offsetParent !== null)
   }
 }
