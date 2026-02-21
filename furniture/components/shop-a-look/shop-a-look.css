@@ -1,0 +1,369 @@
+.sal-section {
+  padding: 2rem 0 2.8rem;
+  background: #efefef;
+  color: #1f1f1f;
+}
+
+.sal-eyebrow {
+  margin: 0;
+  color: #7d7d7d;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.sal-title {
+  margin: 0;
+  font-size: 52px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.sal-sub {
+  margin: 0;
+  color: #636363;
+  font-size: 14px;
+}
+
+.sal-form {
+  border: 1px solid #dcd4cd;
+  background: #f8f4ef;
+  padding: 1rem;
+}
+
+.sal-form-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #3a332d;
+}
+
+.sal-form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+}
+
+.sal-form-field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.sal-form-field label {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #61564d;
+}
+
+.sal-form-field input,
+.sal-form-field select {
+  height: 38px;
+  border: 1px solid #d4ccc3;
+  background: #fff;
+  padding: 0 0.55rem;
+  font-size: 13px;
+}
+
+.sal-form-field input[type="file"] {
+  padding-top: 0.36rem;
+}
+
+.sal-form-action {
+  align-self: end;
+}
+
+.sal-form-action button {
+  height: 38px;
+  width: 100%;
+  border: 0;
+  background: #1d1d1d;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.sal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.3rem;
+}
+
+.sal-card {
+  position: relative;
+  min-width: 0;
+  cursor: pointer;
+  overflow: hidden;
+  background: #d9d9d9;
+}
+
+.sal-card-media {
+  position: relative;
+  overflow: hidden;
+}
+
+.sal-card img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  display: block;
+  transition: transform 280ms ease;
+}
+
+.sal-card:hover img {
+  transform: scale(1.03);
+}
+
+.sal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(248, 248, 248, 0.78);
+  color: #6e8ea4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 24px;
+}
+
+.sal-overlay span {
+  font-size: 25px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.sal-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.sal-modal.is-open {
+  display: flex;
+}
+
+.sal-modal-shell {
+  width: min(1260px, 96vw);
+  height: min(86vh, 760px);
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  overflow: hidden;
+}
+
+.sal-modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sal-modal-panel {
+  padding: 2.1rem 2.1rem 1.6rem;
+  background: #f7f7f7;
+  overflow-y: auto;
+}
+
+.sal-modal-meta {
+  margin: 0;
+  color: #7c7c7c;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sal-modal-title {
+  margin: 0;
+  font-size: 29px;
+  line-height: 1.06;
+  font-weight: 500;
+}
+
+.sal-modal-items {
+  display: grid;
+  gap: 0.85rem;
+  margin-bottom: 1.2rem;
+}
+
+.sal-item {
+  background: #fff;
+  border: 1px solid #e7e2dd;
+  padding: 0.65rem;
+  display: grid;
+  grid-template-columns: 74px 1fr auto;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.sal-item img {
+  width: 74px;
+  height: 74px;
+  object-fit: cover;
+}
+
+.sal-item h4 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+.sal-item p {
+  margin: 0.2rem 0 0;
+  color: #7a7a7a;
+  font-size: 13px;
+}
+
+.sal-item-price {
+  margin: 0;
+  font-size: 15px;
+  color: #1e1e1e;
+  font-weight: 600;
+}
+
+.sal-add-all {
+  width: 100%;
+  border: 0;
+  height: 48px;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+}
+
+.sal-modal-close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 35px;
+  line-height: 1;
+}
+
+.sal-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  width: 42px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.52);
+  color: #151515;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.sal-nav-left {
+  left: 0;
+}
+
+.sal-nav-right {
+  right: 0;
+}
+
+.sal-modal-open {
+  overflow: hidden;
+}
+
+@media (max-width: 991.98px) {
+  .sal-title {
+    font-size: 40px;
+  }
+
+  .sal-form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sal-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sal-card img {
+    height: 370px;
+  }
+
+  .sal-modal-shell {
+    grid-template-columns: 1fr;
+    height: min(88vh, 760px);
+  }
+
+  .sal-modal-image {
+    height: 44vh;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .sal-section {
+    padding-top: 1.6rem;
+  }
+
+  .sal-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sal-title {
+    font-size: 31px;
+  }
+
+  .sal-grid {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .sal-card img {
+    height: 320px;
+  }
+
+  .sal-overlay {
+    font-size: 21px;
+  }
+
+  .sal-overlay span {
+    font-size: 18px;
+  }
+
+  .sal-modal-shell {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .sal-modal-image {
+    height: 39vh;
+  }
+
+  .sal-modal-panel {
+    padding: 1.2rem;
+  }
+
+  .sal-modal-title {
+    font-size: 24px;
+  }
+
+  .sal-item {
+    grid-template-columns: 58px 1fr auto;
+  }
+
+  .sal-item img {
+    width: 58px;
+    height: 58px;
+  }
+
+  .sal-item h4 {
+    font-size: 13px;
+  }
+
+  .sal-item p,
+  .sal-item-price {
+    font-size: 11px;
+  }
+}

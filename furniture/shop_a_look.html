@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="components/navbar/navbar.css">
+  <link rel="stylesheet" href="components/footer/footer.css">
+  <link rel="stylesheet" href="components/product-hover-slideshow/hover-slideshow.css">
+  <link rel="stylesheet" href="components/shop-a-look/shop-a-look.css">
+  <title>Noraya Furnitures - Shop a Look</title>
+</head>
+
+<body>
+  <div data-include="components/navbar/navbar.html"></div>
+  <main>
+    <!-- <div data-include="components/shop-a-look/shop-a-look-form.html"></div> -->
+    <div data-include="components/shop-a-look/shop-a-look.html"></div>
+  </main>
+  <div data-include="components/footer/footer.html"></div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script src="components/include.js"></script>
+<script type="module">
+  import { Application } from "https://unpkg.com/@hotwired/stimulus/dist/stimulus.js"
+  import NavbarController from "./components/navbar/navbar_controller.js"
+  import FooterController from "./components/footer/footer_controller.js"
+  import HoverSlideshowController from "./components/product-hover-slideshow/hover_slideshow_controller.js"
+  import ShopALookController from "./components/shop-a-look/shop_a_look_controller.js"
+  const application = Application.start()
+  application.register("navbar", NavbarController)
+  application.register("footer", FooterController)
+  application.register("hover-slideshow", HoverSlideshowController)
+  application.register("shop-a-look", ShopALookController)
+</script>
+
+</html>
