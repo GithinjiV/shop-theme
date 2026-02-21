@@ -1,0 +1,35 @@
+[data-controller~="hover-slideshow"].phs-stage,
+[data-controller~="hover-slideshow"] .phs-stage {
+  position: relative;
+  overflow: hidden;
+}
+
+[data-controller~="hover-slideshow"] .phs-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 300ms ease;
+  transform: translateX(0);
+}
+
+[data-controller~="hover-slideshow"] .phs-image--next {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  pointer-events: none;
+}
+
+[data-controller~="hover-slideshow"] .phs-image--next.is-ready {
+  transform: translateX(100%);
+}
+
+[data-controller~="hover-slideshow"].is-sliding .phs-image--current,
+[data-controller~="hover-slideshow"] .phs-stage.is-sliding .phs-image--current {
+  transform: translateX(-100%);
+}
+
+[data-controller~="hover-slideshow"].is-sliding .phs-image--next,
+[data-controller~="hover-slideshow"] .phs-stage.is-sliding .phs-image--next {
+  transform: translateX(0);
+}
