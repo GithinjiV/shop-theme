@@ -1,0 +1,146 @@
+.home-catalog-section {
+  background: #efefef;
+  padding: 2.25rem 0 1.25rem;
+}
+
+.home-catalog-title {
+  margin: 0 0 1rem;
+  font-size: 2rem;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #151515;
+}
+
+.home-catalog-block {
+  margin-bottom: 2rem;
+}
+
+.home-featured-grid,
+.home-category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.35rem;
+}
+
+.home-product-image-wrap,
+.home-category-card img {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.home-product-image-wrap img,
+.home-category-card img {
+  width: 100%;
+  height: 192px;
+  object-fit: cover;
+  display: block;
+}
+
+.home-product-badge {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.45rem;
+  background: #ff3a3a;
+  color: #fff;
+  font-size: 0.52rem;
+  line-height: 1;
+  padding: 0.27rem 0.38rem;
+  letter-spacing: 0.02em;
+}
+
+.home-product-chip {
+  display: inline-block;
+  margin-top: 0.35rem;
+  background: #ddcfbb;
+  color: #232323;
+  font-size: 0.52rem;
+  line-height: 1;
+  padding: 0.22rem 0.36rem;
+}
+
+.home-product-card h3 {
+  margin: 0.38rem 0 0.15rem;
+  font-size: 0.94rem;
+  font-weight: 400;
+  color: #555;
+  line-height: 1.35;
+}
+
+.home-product-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #101010;
+  font-weight: 500;
+}
+
+.home-product-card p span {
+  margin-left: 0.4rem;
+  color: #8b8b8b;
+  text-decoration: line-through;
+  font-size: 0.72rem;
+  font-weight: 400;
+}
+
+.home-category-card {
+  color: inherit;
+  text-decoration: none;
+}
+
+.home-category-card span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 0.75rem;
+  font-size: 0.86rem;
+  color: #1c1c1c;
+  letter-spacing: 0.02em;
+}
+
+.home-category-card i {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 991.98px) {
+  .home-catalog-title {
+    font-size: 1.7rem;
+  }
+
+  .home-featured-grid,
+  .home-category-grid {
+    gap: 1rem;
+  }
+
+  .home-product-image-wrap img,
+  .home-category-card img {
+    height: 160px;
+  }
+
+  .home-product-card h3 {
+    font-size: 0.85rem;
+  }
+
+  .home-product-card p {
+    font-size: 0.76rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .home-catalog-section {
+    padding: 1.65rem 0 0.75rem;
+  }
+
+  .home-featured-grid,
+  .home-category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-product-image-wrap img,
+  .home-category-card img {
+    height: 210px;
+  }
+
+  .home-catalog-title {
+    font-size: 1.5rem;
+  }
+}

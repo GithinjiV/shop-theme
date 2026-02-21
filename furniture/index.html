@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="base.css">
   <link rel="stylesheet" href="components/navbar/navbar.css">
   <link rel="stylesheet" href="components/hero/hero.css">
+  <link rel="stylesheet" href="components/product-hover-slideshow/hover-slideshow.css">
+  <link rel="stylesheet" href="components/home-catalog/home-catalog.css">
+  <link rel="stylesheet" href="components/home-b2b/home-b2b.css">
+  <link rel="stylesheet" href="components/home-recently-viewed/home-recently-viewed.css">
   <link rel="stylesheet" href="components/footer/footer.css">
   <title>Noraya Furnitures</title>
 </head>
@@ -18,6 +22,9 @@
   <div data-include="components/navbar/navbar.html"></div>
 
   <div data-include="components/hero/hero.html"></div>
+  <div data-include="components/home-catalog/home-catalog.html"></div>
+  <div data-include="components/home-b2b/home-b2b.html"></div>
+  <div data-include="components/home-recently-viewed/home-recently-viewed.html"></div>
 
   <div data-include="components/footer/footer.html"></div>
 </body>
@@ -31,11 +38,13 @@
   import { Application } from "https://unpkg.com/@hotwired/stimulus/dist/stimulus.js"
   import NavbarController from "./components/navbar/navbar_controller.js"
   import HeroSliderController from "./components/hero/hero_slider_controller.js"
+  import HoverSlideshowController from "./components/product-hover-slideshow/hover_slideshow_controller.js"
   import FooterController from "./components/footer/footer_controller.js"
   const application = Application.start()
   application.register("navbar", NavbarController)
   application.register("footer", FooterController)
   application.register("hero-slider", HeroSliderController)
+  application.register("hover-slideshow", HoverSlideshowController)
 </script>
 
 </html>

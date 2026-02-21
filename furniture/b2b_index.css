@@ -1,0 +1,435 @@
+.b2b-body {
+  margin: 0;
+  background: #dddddd;
+  color: #151515;
+}
+
+.b2b-page {
+  max-width: 1280px;
+  margin: 0 auto;
+  background: #dddddd;
+}
+
+.b2b-hero {
+  position: relative;
+  height: 460px;
+  overflow: hidden;
+}
+
+.b2b-hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.b2b-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.34);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.b2b-hero-overlay h1 {
+  margin: 0;
+  font-size: 52px;
+  font-weight: 700;
+}
+
+.b2b-hero-overlay p {
+  margin: 1rem 0 1.4rem;
+  max-width: 880px;
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+.b2b-contact-btn {
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 35px;
+  line-height: 1;
+  border-radius: 16px;
+  min-width: 320px;
+  text-align: center;
+  padding: 1rem 1.2rem;
+  font-weight: 700;
+}
+
+.b2b-section {
+  padding: 56px 60px 62px;
+}
+
+.b2b-section h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 60px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.b2b-subtitle {
+  margin: 0.9rem auto 2rem;
+  text-align: center;
+  font-size: 24px;
+  max-width: 860px;
+  line-height: 1.2;
+}
+
+.b2b-benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 36px;
+}
+
+.b2b-benefit-card {
+  background: #f6f6f6;
+  border-radius: 10px;
+  min-height: 136px;
+  padding: 22px 22px 18px 84px;
+  position: relative;
+}
+
+.b2b-bullet {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 20px;
+  top: 22px;
+  border-radius: 50%;
+  background: #d5d5d5;
+}
+
+.b2b-benefit-card h3 {
+  margin: 0;
+  font-size: 44px;
+  line-height: 1.02;
+  font-weight: 500;
+}
+
+.b2b-benefit-card p {
+  margin: 0.5rem 0 0;
+  font-size: 27px;
+  line-height: 1.15;
+}
+
+.b2b-catalog-btn {
+  display: block;
+  width: 334px;
+  margin: 34px auto 0;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  background: #000;
+  font-size: 33px;
+  line-height: 1;
+  padding: 0.95rem 1rem;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.b2b-gallery {
+  padding-top: 40px;
+}
+
+.b2b-mosaic {
+  margin-top: 2.2rem;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.b2b-mosaic .tile {
+  border-radius: 18px;
+  background: #b58282;
+  height: 165px;
+  grid-column: span 2;
+}
+
+.b2b-mosaic .tall {
+  height: 350px;
+  grid-row: span 2;
+}
+
+.b2b-mosaic .wide {
+  grid-column: span 3;
+}
+
+.b2b-story {
+  padding-top: 28px;
+}
+
+.b2b-small-kicker {
+  margin: 0;
+  font-size: 34px;
+}
+
+.b2b-story h2 {
+  text-align: left;
+  margin-top: 0.4rem;
+  font-size: 56px;
+  line-height: 1;
+}
+
+.b2b-story-copy {
+  margin-top: 1.2rem;
+  font-size: 33px;
+  line-height: 1.23;
+  max-width: 1160px;
+}
+
+.b2b-contact-list {
+  margin-top: 1.7rem;
+  display: grid;
+  gap: 24px;
+}
+
+.b2b-contact-list article {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.b2b-outline-bullet {
+  width: 16px;
+  height: 16px;
+  margin-top: 11px;
+  border: 5px solid #b47d7d;
+  border-radius: 50%;
+  flex: 0 0 16px;
+}
+
+.b2b-contact-list h4 {
+  margin: 0;
+  font-size: 46px;
+  line-height: 1;
+}
+
+.b2b-contact-list p {
+  margin: 0.24rem 0 0;
+  font-size: 42px;
+  line-height: 1.02;
+  font-weight: 600;
+}
+
+.b2b-whatsapp-btn {
+  margin-top: 1.7rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 14px 48px;
+  background: #2ac764;
+  color: #fff;
+  font-size: 25px;
+}
+
+@media (max-width: 1500px) {
+  .b2b-hero {
+    height: 320px;
+  }
+
+  .b2b-hero img {
+    height: 320px;
+  }
+
+  .b2b-hero-overlay h1 {
+    font-size: 42px;
+  }
+
+  .b2b-hero-overlay p {
+    font-size: 16px;
+  }
+
+  .b2b-contact-btn {
+    font-size: 26px;
+    min-width: 220px;
+    border-radius: 10px;
+  }
+
+  .b2b-section {
+    padding: 40px 36px 44px;
+  }
+
+  .b2b-section h2 {
+    font-size: 50px;
+  }
+
+  .b2b-subtitle {
+    font-size: 19px;
+  }
+
+  .b2b-benefit-card h3 {
+    font-size: 32px;
+  }
+
+  .b2b-benefit-card p {
+    font-size: 19px;
+  }
+
+  .b2b-catalog-btn {
+    font-size: 24px;
+    width: 260px;
+  }
+
+  .b2b-small-kicker {
+    font-size: 23px;
+  }
+
+  .b2b-story h2 {
+    font-size: 40px;
+  }
+
+  .b2b-story-copy {
+    font-size: 20px;
+  }
+
+  .b2b-contact-list h4 {
+    font-size: 32px;
+  }
+
+  .b2b-contact-list p {
+    font-size: 28px;
+  }
+
+  .b2b-whatsapp-btn {
+    font-size: 17px;
+    padding: 10px 26px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .b2b-section {
+    padding: 28px 16px 30px;
+  }
+
+  .b2b-hero {
+    height: 230px;
+  }
+
+  .b2b-hero img {
+    height: 230px;
+  }
+
+  .b2b-hero-overlay h1 {
+    font-size: 26px;
+  }
+
+  .b2b-hero-overlay p {
+    margin: 0.55rem 0 0.85rem;
+    font-size: 13px;
+    padding: 0 1rem;
+  }
+
+  .b2b-contact-btn {
+    min-width: 160px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+  .b2b-section h2 {
+    font-size: 28px;
+  }
+
+  .b2b-subtitle {
+    font-size: 13px;
+    margin-bottom: 1rem;
+  }
+
+  .b2b-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .b2b-benefit-card {
+    min-height: 86px;
+    border-radius: 8px;
+    padding: 15px 14px 12px 52px;
+  }
+
+  .b2b-bullet {
+    width: 16px;
+    height: 16px;
+    left: 14px;
+    top: 14px;
+  }
+
+  .b2b-benefit-card h3 {
+    font-size: 19px;
+  }
+
+  .b2b-benefit-card p {
+    font-size: 12px;
+  }
+
+  .b2b-catalog-btn {
+    width: 170px;
+    font-size: 13px;
+    border-radius: 8px;
+    padding: 0.55rem 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .b2b-gallery .b2b-mosaic {
+    gap: 8px;
+  }
+
+  .b2b-mosaic .tile {
+    border-radius: 8px;
+    height: 78px;
+  }
+
+  .b2b-mosaic .tall {
+    height: 164px;
+  }
+
+  .b2b-story h2 {
+    font-size: 34px;
+  }
+
+  .b2b-small-kicker {
+    font-size: 16px;
+  }
+
+  .b2b-story-copy {
+    font-size: 13px;
+    margin-top: 0.7rem;
+  }
+
+  .b2b-contact-list {
+    margin-top: 1rem;
+    gap: 12px;
+  }
+
+  .b2b-outline-bullet {
+    width: 11px;
+    height: 11px;
+    margin-top: 6px;
+    border-width: 3px;
+    flex-basis: 11px;
+  }
+
+  .b2b-contact-list h4 {
+    font-size: 21px;
+  }
+
+  .b2b-contact-list p {
+    font-size: 17px;
+  }
+
+  .b2b-whatsapp-btn {
+    margin-top: 1rem;
+    font-size: 12px;
+    padding: 8px 16px;
+    border-radius: 7px;
+  }
+}
